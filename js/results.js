@@ -1,3 +1,5 @@
+
+
 function showResults() {
     // Создание контейнера для результатов
     const resultsContainer = document.createElement('div');
@@ -5,7 +7,7 @@ function showResults() {
 
     // Заголовок
     const header = document.createElement('h2');
-    header.textContent = 'Результаты первого раунда';
+    header.textContent = 'Результаты ' + currentRound + '-го раунда';
     resultsContainer.appendChild(header);
 
     // Поля с ответами и значками
@@ -35,7 +37,9 @@ function showResults() {
    button.textContent = 'Продолжить'; // Текст кнопки
    button.className = 'continue-button'; // Класс для стилизации кнопки
    resultsContainer.appendChild(button);
-
+   button.addEventListener('click', function() {
+    nextRount();
+   });
    // Добавление контейнера на страницу
    document.body.appendChild(resultsContainer);
 

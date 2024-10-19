@@ -17,13 +17,13 @@ function StartTimer() {
         } else {
             const timerElement = document.querySelector('.timer');
 
-            if (timeLeft < 10) {
+            if (timeLeft < 11) {
                 timerElement.classList.add('pulsing'); // Добавляем класс пульсации к тексту
             } else {
                 timerElement.classList.remove('pulsing'); // Убираем класс, если время больше 10 секунд
             }
 
-            timeLeft--;
+            timeLeft -= 20;
             // Обновляем текст таймера на странице
             timerElement.textContent = formatTime(timeLeft);
         }
