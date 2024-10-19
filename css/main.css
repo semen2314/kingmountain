@@ -18,3 +18,78 @@ body {
 .waiting-container {
     display: none; /* Скрываем контейнер ожидания по умолчанию */
 }
+.question-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; /* Широкий */
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Чтобы окно было сверху */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Вертикальная ориентация */
+    justify-content: space-between; /* Распределение пространства */
+}
+
+.question-title {
+    background-color: #007bff; /* Голубой фон */
+    color: white; /* Белый шрифт */
+    padding: 10px; /* Отступы для заголовка */
+    border-radius: 5px 5px 0 0; /* Закругленные верхние углы */
+}
+
+.question-input {
+    margin-top: 10px; /* Отступ сверху */
+    flex-grow: 1; /* Занять оставшееся пространство */
+    text-align: center;
+}
+
+.question-container p{
+text-align: left;
+text-shadow: #007bff;
+}
+
+.timer-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 80px; /* Маленький */
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        color: black; /* Исходный цвет текста */
+    }
+    50% {
+        transform: scale(1.1);
+        color: red; /* Цвет текста при пульсации */
+    }
+}
+
+.timer.pulsing {
+    animation: pulse 0.5s infinite; /* Анимация пульсации */
+}
+
+
+.round-container {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Широкий */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
